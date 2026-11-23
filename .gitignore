@@ -1,0 +1,28 @@
+# Editor / OS (sftp.json holds GHC login details)
+.vscode/
+.DS_Store
+
+# Build outputs
+mem_benchmarks
+*.o
+objs/
+
+# Ad-hoc output written next to the code on GHC. Curated results go in results/ (tracked).
+/*.csv
+/*_log.txt
+
+# Generated data: large, reproducible from workload_gen.py / pytorch_ref.py
+traces/
+golden/
+
+# Nsight profiler reports (can be hundreds of MB)
+*.nsys-rep
+*.ncu-rep
+*.qdrep
+*.sqlite
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/

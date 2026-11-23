@@ -1,0 +1,18 @@
+device: NVIDIA GeForce RTX 2080 (sm_75), 46 SMs, 8.3 GB, L2 4096 KB, canMapHostMemory=1
+allocating device table: 2.15 GB
+allocating pinned host table: 2.15 GB
+setup: 1.5 s
+running dev_seq
+running dev_gather
+check dev_gather     ok
+running dev_gather_ro
+running zc_seq
+running zc_gather
+check zc_gather      ok
+running zc_gather_ro
+running h2d_pinned
+running h2d_pageable
+running h2d_per_row
+check h2d_per_row    ok
+running bulk_gather
+check bulk_gather    ok
