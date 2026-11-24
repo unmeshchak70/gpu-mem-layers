@@ -17,10 +17,15 @@
     h1 { line-height: 1.25; margin-bottom: 4px; }
     .authors { color: #59636e; margin-top: 0; }
     a { color: #0969da; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+    th, td { text-align: left; vertical-align: top; padding: 6px 10px; border-bottom: 1px solid #d1d9e0; }
+    th { border-bottom-width: 2px; }
+    td:first-child, td:last-child { white-space: nowrap; }
     @media (prefers-color-scheme: dark) {
       body { color: #e6edf3; background: #0d1117; }
       .authors { color: #9198a1; }
       a { color: #4493f8; }
+      th, td { border-color: #3d444d; }
     }
   </style>
 </head>
@@ -38,6 +43,30 @@
     transfers for missed rows. We evaluate it against an all-in-GPU table, on-demand
     host fetching, and CUDA Unified Memory.
   </p>
+
+  <h2>Schedule</h2>
+  <table>
+    <thead>
+      <tr><th>Week</th><th>Goals</th><th>Owner</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nov 23-29</td>
+        <td>Finish the all-in-GPU gather, on-demand host fetch, Unified Memory baselines as well as the implementations for concurrent GPU hash table, cached gather kernel, batch deduplication, and pin counts by the end of Thanksgiving break. Further brainstorm how to satisfactorily extend our project to more than just a hashtable/cache as prescribed in the grader comment for our initial proposal (for example, Meta's memory layers).</td>
+        <td>Both</td>
+      </tr>
+      <tr>
+        <td>Nov 30-Dec 6</td>
+        <td>Evaluating and tuning our system on the extension (undecided for now). Evaluation sweeps over an architecture making use of product-key memory layers (such as Meta's Memory Layers). This may require us to use more powerful compute than the GHC machines (like NCSA, Google Colab, AWS/Azure) depending on the scale of the model. A profile of what limits performance using Nsight.</td>
+        <td>Both</td>
+      </tr>
+      <tr>
+        <td>Dec 7-11</td>
+        <td>Compile the final report and prepare for the poster session.</td>
+        <td>Both</td>
+      </tr>
+    </tbody>
+  </table>
 
   <h2>Documents</h2>
   <ul>
